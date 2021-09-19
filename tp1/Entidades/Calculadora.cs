@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace Entidades
 {
     //Clase estática Calculadora:
     public static class Calculadora
     {
-        private static List<char> operadoresValidos = new List<char>() { '+', '-', '/', '*' };
+        private static List<char> operadoresValidos = new List<char> { '+', '-', '/', '*' };
 
         //• El método ValidarOperador será privado y estático.Deberá validar que el operador
         //recibido sea +, -, / o*. Caso contrario retornará +.
