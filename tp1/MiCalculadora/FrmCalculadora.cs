@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace MiCalculadora
 {
-    public partial class FormCalculadora : Form
+    public partial class FrmCalculadora : Form
     {
-        public FormCalculadora()
+        public FrmCalculadora()
         {
             InitializeComponent();
         }

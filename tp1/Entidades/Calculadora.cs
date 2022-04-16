@@ -7,16 +7,13 @@ namespace Entidades
     //Clase estática Calculadora:
     public static class Calculadora
     {
-        private static List<char> operadoresValidos = new List<char> { '+', '-', '/', '*' };
-
         //• El método ValidarOperador será privado y estático.Deberá validar que el operador
         //recibido sea +, -, / o*. Caso contrario retornará +.
         private static char ValidarOperador(char operador)
         {
-            if (operadoresValidos.Contains(operador))
+            if (operador.Equals('-') || operador.Equals('/') || operador.Equals('*'))
                 return operador;
-            else
-                return '+';
+            return '+';
         }
 
         //• El método Operar será de clase: validará y realizará la operación pedida entre

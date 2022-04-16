@@ -9,8 +9,6 @@ namespace Entidades
     //Clase Operando:
     public class Operando
     {
-        private static List<char> binarios = new List<char>() { '0', '1' };
-
         //• El atributo numero es privado.
         private double numero;
 
@@ -22,9 +20,8 @@ namespace Entidades
         }
 
         //• El constructor por defecto(sin parámetros) asignará valor 0 al atributo numero.
-        public Operando()
+        public Operando() : this(0)
         {
-            numero = 0;
         }
 
         public Operando(double numero)
@@ -54,7 +51,7 @@ namespace Entidades
             bool esBinario = true;
             foreach (char digito in strNum)
             {
-                if (!binarios.Contains(digito))
+                if (digito != '0' && digito != '1')
                 {
                     esBinario = false;
                     break;
