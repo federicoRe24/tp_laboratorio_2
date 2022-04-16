@@ -39,4 +39,4 @@ C:\Users\feder\source\tp_laboratorio_2\tp1\MiCalculadora\obj\Debug\net5.0-window
 C:\Users\feder\source\tp_laboratorio_2\tp1\MiCalculadora\obj\Debug\net5.0-windows\MiCalculadora.pdb
 C:\Users\feder\source\tp_laboratorio_2\tp1\MiCalculadora\obj\Debug\net5.0-windows\MiCalculadora.genruntimeconfig.cache
 C:\Users\feder\source\tp_laboratorio_2\tp1\MiCalculadora\obj\Debug\net5.0-windows\ref\MiCalculadora.dll
-C:\Users\feder\source\tp_laboratorio_2\tp1\MiCalculadora\obj\Debug\net5.0-windows\MiCalculadora.FrmCalculadora.resources
+C:\Users\feder\source\tp_laboratorio_2\tp1\MiCalculadora\obj\Debug\net5.0-windows\MiCalculadora.FormCalculadora.resources

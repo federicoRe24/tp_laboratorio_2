@@ -11,8 +11,10 @@ namespace Entidades
         //recibido sea +, -, / o*. Caso contrario retornará +.
         private static char ValidarOperador(char operador)
         {
-            if (operador.Equals('-') || operador.Equals('/') || operador.Equals('*'))
+            if (operador == '+' || operador == '-' || operador == '*' || operador == '/')
+            {
                 return operador;
+            }
             return '+';
         }
 
