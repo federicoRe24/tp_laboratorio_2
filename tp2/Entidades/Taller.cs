@@ -57,7 +57,6 @@ namespace Entidades
             sb.AppendLine("");
             foreach (Vehiculo v in taller.vehiculos)
             {
-                sb.AppendLine(tipo.ToString());
                 switch (tipo)
                 {
                     case ETipo.Camioneta:
