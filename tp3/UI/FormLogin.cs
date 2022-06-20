@@ -13,8 +13,6 @@ namespace UI
 {
     public partial class FormLogin : Form
     {
-        public Dictionary<string, string> usuarios = new Dictionary<string, string>();       
-
         public FormLogin()
         {
             InitializeComponent();           
@@ -22,13 +20,6 @@ namespace UI
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            //Empleado empleado = Empleado.GetEmpleado(txtUsuario.Text);
-
-            //if (empleado is null)
-            //    MessageBox.Show("El usuario ingresado no existe");
-            //else if (empleado.Clave == txtClave.Text)
-            //{
-
             if (txtUsuario.Text == "admin" && txtClave.Text == "admin")
             {
                 FormPrincipal frmPrincipal = new FormPrincipal();
@@ -42,6 +33,17 @@ namespace UI
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        /// <summary>
+        /// Rellena los datos de ingreso con los de un usuario Administrador
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnAdmin_Click(object sender, EventArgs e)
+        {
+            txtUsuario.Text = "admin";
+            txtClave.Text = "admin";
         }
     }
 }

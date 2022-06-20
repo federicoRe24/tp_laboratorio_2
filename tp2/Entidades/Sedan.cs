@@ -41,19 +41,17 @@ namespace Entidades
         {
             get
             {
-                return this.Tamanio;
+                return ETamanio.Mediano;
             }
         }
 
-        public new string Mostrar()
+        public override sealed string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine("SEDAN");
-            sb.AppendLine(this.ToString());
-            sb.AppendLine(String.Format("TAMAÑO : {0}", this.Tamanio));
+            sb.AppendLine(base.ToString());
             sb.AppendLine("TIPO : " + this.tipo);
-            sb.AppendLine("");
             sb.AppendLine("---------------------");
 
             return sb.ToString();

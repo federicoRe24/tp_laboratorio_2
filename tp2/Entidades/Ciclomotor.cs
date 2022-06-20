@@ -23,14 +23,12 @@ namespace Entidades
             }
         }
 
-        private new string Mostrar()
+        public override sealed string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine("CICLOMOTOR");
-            sb.AppendLine(this.Mostrar());
-            sb.AppendLine(String.Format("TAMAÑO : {0}", this.Tamanio));
-            sb.AppendLine("");
+            sb.AppendLine(base.Mostrar());
             sb.AppendLine("---------------------");
 
             return sb.ToString();

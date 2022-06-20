@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btnCargarAtencion = new System.Windows.Forms.Button();
-            this.btnCargarAfiliado = new System.Windows.Forms.Button();
+            this.btnAfiliados = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -43,15 +43,15 @@
             this.btnCargarAtencion.UseVisualStyleBackColor = true;
             this.btnCargarAtencion.Click += new System.EventHandler(this.btnCargarAtencion_Click);
             // 
-            // btnCargarAfiliado
+            // btnAfiliados
             // 
-            this.btnCargarAfiliado.Location = new System.Drawing.Point(476, 206);
-            this.btnCargarAfiliado.Name = "btnCargarAfiliado";
-            this.btnCargarAfiliado.Size = new System.Drawing.Size(94, 56);
-            this.btnCargarAfiliado.TabIndex = 1;
-            this.btnCargarAfiliado.Text = "Cargar Afiliado";
-            this.btnCargarAfiliado.UseVisualStyleBackColor = true;
-            this.btnCargarAfiliado.Click += new System.EventHandler(this.btnCargarAfiliado_Click);
+            this.btnAfiliados.Location = new System.Drawing.Point(476, 206);
+            this.btnAfiliados.Name = "btnAfiliados";
+            this.btnAfiliados.Size = new System.Drawing.Size(94, 56);
+            this.btnAfiliados.TabIndex = 1;
+            this.btnAfiliados.Text = "Afiliados";
+            this.btnAfiliados.UseVisualStyleBackColor = true;
+            this.btnAfiliados.Click += new System.EventHandler(this.btnAfiliados_Click);
             // 
             // btnSalir
             // 
@@ -70,7 +70,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
             this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.btnCargarAfiliado);
+            this.Controls.Add(this.btnAfiliados);
             this.Controls.Add(this.btnCargarAtencion);
             this.Name = "FormPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -82,7 +82,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnCargarAtencion;
-        private System.Windows.Forms.Button btnCargarAfiliado;
+        private System.Windows.Forms.Button btnAfiliados;
         private System.Windows.Forms.Button btnSalir;
     }
 }

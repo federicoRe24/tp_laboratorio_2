@@ -9,13 +9,13 @@ namespace Entidades
     /// <summary>
     /// No podrá tener clases heredadas.
     /// </summary>
-    public class Taller
+    public sealed class Taller
     {
         List<Vehiculo> vehiculos;
         int espacioDisponible;
         public enum ETipo
         {
-            Moto, Automovil, Camioneta, Ciclomotor, Sedan, SUV, Todos
+            Ciclomotor, Sedan, SUV, Todos
         }
 
         #region "Constructores"
@@ -52,28 +52,18 @@ namespace Entidades
         public static string Listar(Taller taller, ETipo tipo)
         {
             StringBuilder sb = new StringBuilder();
+            string stringTipo = tipo.ToString().ToLower();
 
             sb.AppendFormat("Tenemos {0} lugares ocupados de un total de {1} disponibles", taller.vehiculos.Count, taller.espacioDisponible);
             sb.AppendLine("");
             foreach (Vehiculo v in taller.vehiculos)
             {
-                switch (tipo)
+                string tipoVehiculo = v.GetType().Name.ToLower();
+                if (tipoVehiculo == stringTipo || stringTipo == "todos")
                 {
-                    case ETipo.Camioneta:
-                        sb.AppendLine(v.Mostrar());
-                        break;
-                    case ETipo.Moto:
-                        sb.AppendLine(v.Mostrar());
-                        break;
-                    case ETipo.Automovil:
-                        sb.AppendLine(v.Mostrar());
-                        break;
-                    default:
-                        sb.AppendLine(v.Mostrar());
-                        break;
+                    sb.AppendLine(v.Mostrar());
                 }
             }
-
             return sb.ToString();
         }
         #endregion
@@ -87,13 +77,17 @@ namespace Entidades
         /// <returns></returns>
         public static Taller operator +(Taller taller, Vehiculo vehiculo)
         {
-            foreach (Vehiculo v in taller.vehiculos)
+            if (taller.vehiculos.Count < taller.espacioDisponible)
             {
-                if (v == vehiculo)
-                    return taller;
+                foreach (Vehiculo v in taller.vehiculos)
+                {
+                    if (v == vehiculo)
+                    {
+                        return taller;
+                    }
+                }
+                taller.vehiculos.Add(vehiculo);
             }
-
-            taller.vehiculos.Add(vehiculo);
             return taller;
         }
         /// <summary>

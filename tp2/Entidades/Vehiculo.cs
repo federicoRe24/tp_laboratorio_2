@@ -45,7 +45,7 @@ namespace Entidades
         /// Publica todos los datos del Vehiculo.
         /// </summary>
         /// <returns></returns>
-        public string Mostrar()
+        public virtual string Mostrar()
         {
             return (string)this;
         }
@@ -54,11 +54,12 @@ namespace Entidades
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendLine(p.GetType().ToString().Replace("Entidades.", ""));
             sb.AppendLine(String.Format("CHASIS: {0}\r", p.chasis));
             sb.AppendLine(String.Format("MARCA : {0}\r", p.marca.ToString()));
             sb.AppendLine(String.Format("COLOR : {0}\r", p.color.ToString()));
             sb.AppendLine("---------------------");
+            sb.AppendLine("");
+            sb.AppendFormat("TAMAÑO : {0}", p.Tamanio.ToString());
 
             return sb.ToString();
         }
@@ -71,7 +72,7 @@ namespace Entidades
         /// <returns></returns>
         public static bool operator ==(Vehiculo v1, Vehiculo v2)
         {
-            return (v1.chasis == v2.chasis);
+            return !(v1 is null) && !(v2 is null) && (v1.chasis == v2.chasis);
         }
         /// <summary>
         /// Dos vehiculos son distintos si su chasis es distinto

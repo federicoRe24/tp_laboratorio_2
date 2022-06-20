@@ -23,7 +23,7 @@ namespace UI
             formCargarAtencion.ShowDialog();
         }
 
-        private void btnCargarAfiliado_Click(object sender, EventArgs e)
+        private void btnAfiliados_Click(object sender, EventArgs e)
         {
             FormAfiliados frmAfiliados = new FormAfiliados();
             frmAfiliados.ShowDialog();
