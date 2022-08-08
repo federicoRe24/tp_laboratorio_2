@@ -92,7 +92,7 @@ namespace Entidades
             }
         }
 
-        public static void GuardarAfiliado(Afiliado afiliado)
+        public static int GuardarAfiliado(Afiliado afiliado)
         {
             try
             {
@@ -107,8 +107,9 @@ namespace Entidades
                     command.CommandText = $"INSERT INTO Afiliado VALUES ({idPersona}, {(isActivo)})";
                     command.Parameters.AddWithValue("@IdPersona", idPersona);
                     command.Parameters.AddWithValue("@IsActivo", afiliado.IsActivo);
-                    command.ExecuteNonQuery();
-                }             
+                    return command.ExecuteNonQuery();
+                }
+                else return 0;
             }
             catch (Exception e)
             {

@@ -30,19 +30,9 @@ namespace Entidades
             set { isActivo = value; }
         }
 
-        public bool CargarAtencion()
-        {
-            return false;
-        }
-
         public string MostrarDatos()
         {
             return (Id + Apellido + Nombre).ToString();
-        }
-
-        public string MostrarDatosReducido()
-        {
-            return Apellido + ", " + Nombre + " - " + Id;
         }
     }
 }
